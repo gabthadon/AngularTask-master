@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="card" >
+        <div class="header text-center font-bold uppercase text-blue-200" >Open</div>
+      
+<div cdkDropList (cdkDropListDropped)="drop($event)" >
+
+<div class="card-content bg-yellow-500"  *ngFor="let item of taskList; track item; let i = index " cdkDrag>
+   <div class="title font-bold text-center">{{item.name}}</div>
+   <div class="description italic">{{item.desc}}</div>
+   <div class="due-date text-sm">{{item.date}}</div>
+  <div class="icons">  
+    <i class="fas  fa-trash text-red-500" (click)="deleteTask(i)"></i>
+    <i class="fas  fa-edit text-blue-500" (click)="openModal(i)"></i>
+</div>
+</div> 
+
+
+</div>
+   
+
+        
+           </div>
+
+
+           
+
+           <div class="card" >
+            <div class="header text-center font-bold uppercase text-blue-200" >Pending</div>
+            <div class="card-content bg-yellow-500" *ngFor="let item of data">
+               <div class="title">{{item.title}}</div>
+               <div class="description">{{item.body}}</div>
+               <div class="due-date">     </div>
+            </div>  
+         
+               </div>
+
+
+
+
+
+
+               <div class="card" >
+                <div class="header text-center font-bold uppercase text-blue-200" >In Progress</div>
+                <div class="card-content bg-yellow-500" *ngFor="let item of data">
+                  <div class="title">{{item.title}}</div>
+                  <div class="description">{{item.body}}</div>
+                  <div class="due-date">     </div>
+               </div> 
+                   </div>
+
+
+
+
+
+
+                   <div class="card" >
+                    <div class="header text-center font-bold uppercase text-blue-200" >Completed</div>
+                    <div class="card-content bg-yellow-500" *ngFor="let item of data">
+                     <div class="title">{{item.title}}</div>
+                     <div class="description">{{item.body}}</div>
+                     <div class="due-date">     </div>
+                  </div> 
+                    
+                   
+                    
+                   
+                      
+                       </div>
+</div>
+
+
+<div *ngIf="isOpen ">
+   <app-modal [myTask]="taskList[id]"></app-modal>
+</div>

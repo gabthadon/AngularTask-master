@@ -1,0 +1,34 @@
+.card {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 300px;
+    text-align: justify;
+
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+
+  .card-content{
+    border-radius: 5px;
+    background-color: rgb(250, 250, 246);
+    padding-left: 10px;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 10px;
+    cursor: grab;
+  }
+ 
+  .icons{
+    padding: 8px;
+    display: flex;
+    justify-content: right;
+  }
+
+  i{
+    padding: 5px;
+  }

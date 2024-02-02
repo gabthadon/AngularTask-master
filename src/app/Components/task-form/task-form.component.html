@@ -1,0 +1,16 @@
+<div class="container">  
+    <input type="text" class="border border-gray-300 rounded-md p-2" [(ngModel)]="name" placeholder="Enter Title">
+    <textarea class="resize-none border rounded-md p-2" [(ngModel)]="desc"  placeholder="Enter Description"></textarea>
+    <input type="text" class="border border-gray-300 rounded-md p-2" [(ngModel)]="date"  placeholder="Enter Due Date">
+    </div>
+    
+    
+      <div class="flex  justify-center  pt-5 pb-10" >
+        <button (click)="addTask()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+         Add Task +
+        </button>
+      </div>
+
+      <app-card [(taskList)]="list" ></app-card>
+    
+    

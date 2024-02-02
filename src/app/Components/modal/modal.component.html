@@ -1,0 +1,17 @@
+<div *ngIf="isOpen">
+    <div class="modal" >
+        <div class="close" (click)="closeModal()">x</div>
+        <div class="modal-content" >
+            <div class="uppercase font-bold text-blue-500 text-center pb-5">Edit Task</div>
+            <input type="text" class="border border-gray-300 rounded-md p-2 mb-2" [(ngModel)]="myTask.name"  placeholder="Enter Title">
+
+            <textarea class="resize-none border rounded-md p-2"   placeholder="Enter Description" [(ngModel)]="myTask.desc"> </textarea>
+    <input type="text" class="border border-gray-300 rounded-md p-2" [(ngModel)]="myTask.date"  placeholder="Enter Due Date">
+
+    <div class="pt-5"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">UPDATE
+        <i class="fas fa-edit pl-2 "></i>
+    </button></div>
+        </div>
+        
+           </div>
+</div>
