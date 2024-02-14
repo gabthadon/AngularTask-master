@@ -8,14 +8,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskFormComponent } from './Components/task-form/task-form.component';
 import { ModalComponent } from './Components/modal/modal.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { RegisterComponent } from './Components/register/register.component';
+import { LoginComponent } from './Components/login/login.component';
+import { authInterceptor } from './auth.Interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     TaskFormComponent,
-    ModalComponent
+    ModalComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     DragDropModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptors([authInterceptor]))
+  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

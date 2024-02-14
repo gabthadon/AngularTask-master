@@ -13,4 +13,3 @@ iv  Drag and Drop Task
 v Fetching of Data  With REST API (Json Placeholder online resource)
 
 
-I couldont Add the Authentication function because i descovered the interview email just yesterday in my box.  All designs were implimented within 24hrs.
