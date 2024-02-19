@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { TaskFormComponent } from './Components/task-form/task-form.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
+import { authGuard } from './Guard/auth.guard';
 
 const routes: Routes = [
  {
   path:'home',
-  component: TaskFormComponent
+  component: TaskFormComponent,
+  canActivate: [authGuard]
  },
  {
   path: 'register',

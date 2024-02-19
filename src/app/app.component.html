@@ -4,17 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KanKam Board</title>
 </head>
-<body>
 
-  <div *ngIf="authService.currentUserSig()===null">
-  <a routerLink="login">Login</a> 
-  <a routerLink="register">Register</a> 
-  </div>
 
-  <div class="user" *ngIf="authService.currentUserSig()">
-    Logged in as {{authService.currentUserSig()?.username}} <br>
-    <span (click)="logout()">Logout</span>
-  </div>
+
   
 
 <router-outlet></router-outlet>
@@ -23,5 +15,5 @@
 
 
 
-</body>
+
 </html>

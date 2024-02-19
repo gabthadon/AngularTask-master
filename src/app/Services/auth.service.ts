@@ -7,4 +7,6 @@ import { UserInterface } from '../user-interface';
 export class AuthService {
 
   currentUserSig = signal<UserInterface | undefined | null>(undefined);
+
+ 
 }

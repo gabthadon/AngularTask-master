@@ -1,4 +1,17 @@
-
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background-container {
+    background-color: #0e475e;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  
 .box {
     display: flex;
     justify-content: center;

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="card" >
-        <div class="header text-center font-bold uppercase text-blue-200" >Open</div>
+        <div class="header text-center font-bold uppercase text-white" >Open</div>
       
 <div cdkDropList (cdkDropListDropped)="drop($event)" >
 
@@ -25,7 +25,7 @@
            
 
            <div class="card" >
-            <div class="header text-center font-bold uppercase text-blue-200" >Pending</div>
+            <div class="header text-center font-bold uppercase text-white" >Pending</div>
             <div class="card-content bg-yellow-500" *ngFor="let item of data">
                <div class="title">{{item.title}}</div>
                <div class="description">{{item.body}}</div>
@@ -40,7 +40,7 @@
 
 
                <div class="card" >
-                <div class="header text-center font-bold uppercase text-blue-200" >In Progress</div>
+                <div class="header text-center font-bold uppercase text-white" >In Progress</div>
                 <div class="card-content bg-yellow-500" *ngFor="let item of data">
                   <div class="title">{{item.title}}</div>
                   <div class="description">{{item.body}}</div>
@@ -54,7 +54,7 @@
 
 
                    <div class="card" >
-                    <div class="header text-center font-bold uppercase text-blue-200" >Completed</div>
+                    <div class="header text-center font-bold uppercase text-white" >Completed</div>
                     <div class="card-content bg-yellow-500" *ngFor="let item of data">
                      <div class="title">{{item.title}}</div>
                      <div class="description">{{item.body}}</div>

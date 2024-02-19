@@ -1,5 +1,17 @@
 
-<div class="title">KANBAN BOARD </div>
+  <div class="background">
+
+    <div *ngIf="authService.currentUserSig()===null">
+      <a routerLink="/login">Login</a>  <br>
+      <a routerLink="/register">Register</a> 
+      </div>
+    
+      <div class="user" *ngIf="authService.currentUserSig()">
+        Logged in as {{authService.currentUserSig()?.username}} <br>
+        <span (click)="logout()">Logout</span>
+      </div>
+
+    <div class="title">KANBAN BOARD </div>
 
 <div class="container">  
 
@@ -17,4 +29,5 @@
 
       <app-card [(taskList)]="list" ></app-card>
     
-    
+ 
+</div>
